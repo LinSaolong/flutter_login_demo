@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import '../home_page.dart';
@@ -37,18 +38,18 @@ class AuthService {
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }
 
-  // signInWithFacebook() async {
-  //   try {
-  //     final facebookLoginResult = await FacebookAuth.instance
-  //         .login(permissions: ["public_profile", "email"]);
+  signInWithFacebook() async {
+    try {
+      final facebookLoginResult = await FacebookAuth.instance
+          .login(permissions: ["public_profile", "email"]);
 
-  //     final facebookAuthCredential = FacebookAuthProvider.credential(
-  //         facebookLoginResult.accessToken!.token);
-  //     await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
-  //   } catch (e) {
-  //     print(e);
-  //   }
-  // }
+      final facebookAuthCredential = FacebookAuthProvider.credential(
+          facebookLoginResult.accessToken!.token);
+      await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+    } catch (e) {
+      print(e);
+    }
+  }
 
   signOut() {
     FirebaseAuth.instance.signOut();

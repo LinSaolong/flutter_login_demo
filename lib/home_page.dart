@@ -45,7 +45,10 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(5)),
               child: const Text(
                 'LOG OUT',
-                style: TextStyle(color: Colors.white, fontSize: 15),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
               ),
               onPressed: () {
                 AuthService().signOut();

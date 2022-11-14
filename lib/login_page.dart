@@ -39,12 +39,12 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: const Text("Google Login"),
             ),
-            // GestureDetector(
-            //   onTap: () {
-            //     AuthService().signInWithFacebook();
-            //   },
-            //   child: const Text("Facebook Login"),
-            // ),
+            GestureDetector(
+              onTap: () {
+                AuthService().signInWithFacebook();
+              },
+              child: const Text("Facebook Login"),
+            ),
           ],
         ),
       ),

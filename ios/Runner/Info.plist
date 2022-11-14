@@ -60,5 +60,26 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+	<dict>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>fb789698738764684</string>
+	</array>
+	</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>789698738764684</string>
+	<key>FacebookClientToken</key>
+	<string>71c2e0b75eefc35a2f9f0e1bc7ef0a35</string>
+	<key>FacebookDisplayName</key>
+	<string>Flutter login</string>
+
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+	<string>fbapi</string>
+	<string>fb-messenger-share-api</string>
+	</array>
 </dict>
 </plist>
