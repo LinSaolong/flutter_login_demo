@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Google Login"),
+        title: const Text("Login Page"),
         backgroundColor: Colors.green,
       ),
       body: Container(
@@ -26,24 +26,30 @@ class _LoginPageState extends State<LoginPage> {
             left: 20,
             right: 20,
             top: size.height * 0.2,
-            bottom: size.height * 0.5),
+            bottom: size.height * 0.2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text("Hello, \nGoogle sign in",
-                style: TextStyle(fontSize: 30)),
-            GestureDetector(
-              onTap: () {
+            const Text("Hello Please Login", style: TextStyle(fontSize: 30)),
+            const SizedBox(height: 50),
+            OutlinedButton(
+              onPressed: () {
                 AuthService().signInWithGoogle();
               },
-              child: const Text("Google Login"),
+              child: const Text(
+                "Google Login",
+                style: TextStyle(fontSize: 25),
+              ),
             ),
-            GestureDetector(
-              onTap: () {
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () {
                 AuthService().signInWithFacebook();
               },
-              child: const Text("Facebook Login"),
+              child: const Text(
+                "Facebook Login",
+                style: TextStyle(fontSize: 25),
+              ),
             ),
           ],
         ),
