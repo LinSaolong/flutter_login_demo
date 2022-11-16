@@ -54,11 +54,18 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>fb789698738764684</string>
 				<!-- TODO Replace this value: -->
 				<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
 				<string>com.googleusercontent.apps.265848723908-hvlsva4rrmfe3nclh5k83impafo6n9qf</string>
 			</array>
 		</dict>
 	</array>
+	<key>FacebookAppID</key>
+	<string>789698738764684</string>
+	<key>FacebookClientToken</key>
+	<string>71c2e0b75eefc35a2f9f0e1bc7ef0a35</string>
+	<key>FacebookDisplayName</key>
+	<string>Flutter login</string>
 </dict>
 </plist>
